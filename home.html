@@ -24,86 +24,97 @@
   </head>
   <body class="body">
     <!-- The main nav link -->
-     <div class="body1">
-    <header>
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="menu">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-list-ul"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            />
-          </svg>
-        </label>
-        <div class="logo">
+    <div class="body1">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list-ul"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              />
+            </svg>
+          </label>
+          <div class="logo">
+            <h1>SAPA</h1>
+          </div>
+          <!-- First div list -->
+
+          <div class="main-div">
+            <ul class="item">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="#Rent History">Rent History</a></li>
+              <li><a href="#Book Accomodation">Book Accomodation</a></li>
+              <li><a href="#Find Roommates">Find Roommates</a></li>
+            </ul>
+          </div>
+          <!-- Second div list -->
+          <div class="main-div">
+            <ul class="account">
+              <li><a href="login.html">PROFILE</a></li>
+              <li><a href="#setting">SETTING</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter School Name here" id="type" />
+          <button onclick="searchSchool()" class="searchClass" id="button1">
+            <i class="fa-solid fa-search"></i>
+            <!-- Search icon inside button -->
+          </button>
+        </div>
+      </header>
+
+      <div class="section1">
+        <div class="main">
           <h1>SAPA</h1>
+          <h2>Students Accomodation Placement Agency</h2>
+          <p>
+            Explore affordable, convenient, and student-friendly accommodation
+            options. Simplify your search and focus on what matters most.
+          </p>
+          <a href="explore.html"
+            ><button class="explore-btn" id="button2">Explore Now</button></a
+          >
         </div>
-        <!-- First div list -->
-
-        <div class="main-div">
-          <ul class="item">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="#Rent History">Rent History</a></li>
-            <li><a href="#Book Accomodation">Book Accomodation</a></li>
-            <li><a href="#Find Roommates">Find Roommates</a></li>
-          </ul>
-        </div>
-        <!-- Second div list -->
-        <div class="main-div">
-          <ul class="account">
-            <li><a href="#notification">PROFILE</a></li>
-            <li><a href="#setting">SETTING</a></li>
-          </ul>
-        </div>
-        
-      </nav>
-      <div class="search-bar">
-        <input type="text" placeholder="Enter School Name here"  id="type"/>
-        <button onclick="searchSchool()" class="searchClass" id="button1">
-          <i class="fa-solid fa-search"></i>
-          <!-- Search icon inside button -->
-        </button>
       </div>
-    </header>
-
-    <div class="section1">
-      <div class="main">
-      <h1>SAPA</h1>
-      <h2>Students Accomodation Placement Agency</h2>
-      <p>Explore affordable, convenient, and student-friendly accommodation options. Simplify your search and focus on what matters most.</p>
-      <a href="explore.html"><button class="explore-btn" id="button2">Explore Now</button></a>
-      
     </div>
-    </div>
-  </div>
     <div class="drop-down">
       <h2>Accomodations near you</h2>
       <i class="fa-solid fa-caret-down"></i>
     </div>
-   <!-- Footer Section -->
-   <footer class="footer">
-    <div class="footer-links">
-      <a href="#contact">Contact Us</a>
-      <a href="#terms">Terms and Conditions</a>
-      <a href="#privacy">Privacy Notice</a>
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-bottom">
-      <span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-2.95-.49-5.31-2.85-5.8-5.8H5v-2h.2C6.69 8.42 8.42 6.69 11 6.2V5h2v1.2c2.58.49 4.31 2.22 4.8 4.8H19v2h-.2c-.49 2.95-2.85 5.31-5.8 5.8V19h-2v.93zM13 12h-2v-2h2v2zm0 4h-2v-2h2v2z"/>
-        </svg>
-        2024 All rights reserved.
-      </span>
-    </div>
-  </footer>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#contact">Contact Us</a>
+        <a href="#terms">Terms and Conditions</a>
+        <a href="#privacy">Privacy Notice</a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="currentColor"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-2.95-.49-5.31-2.85-5.8-5.8H5v-2h.2C6.69 8.42 8.42 6.69 11 6.2V5h2v1.2c2.58.49 4.31 2.22 4.8 4.8H19v2h-.2c-.49 2.95-2.85 5.31-5.8 5.8V19h-2v.93zM13 12h-2v-2h2v2zm0 4h-2v-2h2v2z"
+            />
+          </svg>
+          2024 All rights reserved.
+        </span>
+      </div>
+    </footer>
   </body>
 </html>
