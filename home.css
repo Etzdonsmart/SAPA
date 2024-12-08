@@ -1,18 +1,16 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-
-.body1{
+.body1 {
   background-color: #3ed144;
 }
 
-
 /* The main nav style */
-nav{
+nav {
   height: 70px;
   background-color: #3ed144;
   color: white;
@@ -22,56 +20,53 @@ nav{
   align-items: center;
   position: sticky;
   top: 0;
-
 }
 
-.main-div{
+.main-div {
   display: flex;
-  }
-  
-.item{
+}
+
+.item {
   display: flex;
   margin-right: 4rem;
-  }
-
-.account{
-  display: flex;
-    
-  }
-
-  .logo h1{
-    font-style: 'Poppins', sans-serif; ;
-    color: #ffffff;
-    margin: 0 0.5rem;
-
 }
-nav li{
-list-style: none;
-margin: 0 0.5rem;
 
+.account {
+  display: flex;
+}
+
+.logo h1 {
+  font-style: "Poppins", sans-serif;
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+nav li {
+  list-style: none;
+  margin: 0 0.5rem;
 }
 
 nav a {
-text-decoration: none;
-color: bisque;
+  text-decoration: none;
+  color: bisque;
 }
 
-nav a::after{
+nav a::after {
   content: "";
   display: block;
   height: 3px;
   background-color: green;
   width: 0%;
   transition: all ease-in-out 300ms;
-
 }
 
-nav a:hover::after{
+nav a:hover::after {
   width: 100%;
-
 }
 
-nav svg, .main-div h3, #check, .menu {
+nav svg,
+.main-div h3,
+#check,
+.menu {
   display: none;
 }
 
@@ -91,7 +86,7 @@ nav svg, .main-div h3, #check, .menu {
   }
 }
 
- /* .item,
+/* .item,
     .account {
       flex-direction: column;
       width: auto;
@@ -111,22 +106,22 @@ nav svg, .main-div h3, #check, .menu {
     nav a {
       display: inline-block;
     } */
-    nav a:hover {
-      margin-left: 2px;
-      transition: all ease-in-out 300ms;
-    }
-    .menu {
-      display: inline-block;
-      position: fixed;
-      right: 2.5rem;
-      z-index: 99;
-    } 
+nav a:hover {
+  margin-left: 2px;
+  transition: all ease-in-out 300ms;
+}
+.menu {
+  display: inline-block;
+  position: fixed;
+  right: 2.5rem;
+  z-index: 99;
+}
 
-.search-bar{
+.search-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-items:center;
+  justify-items: center;
   text-align: center;
   position: sticky;
   width: 100%;
@@ -134,10 +129,10 @@ nav svg, .main-div h3, #check, .menu {
   background-color: #3ed144;
   margin-bottom: 5px;
 }
-  .search-bar button{
-    display: flex;
-    flex-direction: row;
-  }
+.search-bar button {
+  display: flex;
+  flex-direction: row;
+}
 /* .type{
   display: flex;
   align-items: center;
@@ -163,22 +158,24 @@ input:focus {
   outline: none; /* Remove default outline */
 }
 
-#button1{
+#button1 {
   width: 2%; /* Set the width */
   height: 5%;
   border: none;
   background-color: #ece6f0;
   padding: 11px;
   border-top-right-radius: 20px;
-  border-bottom-right-radius:20px;
+  border-bottom-right-radius: 20px;
 }
 
-.main{
+.main {
   height: 400px;
   background-image: linear-gradient(
-    rgba(255, 255, 255, 0.5), /* White color with transparency */
-    rgba(255, 255, 255, 0.5)  /* Adjust opacity as needed */
-  ),url(images1/Hostel-online-1.jpg);
+      rgba(255, 255, 255, 0.5),
+      /* White color with transparency */ rgba(255, 255, 255, 0.5)
+        /* Adjust opacity as needed */
+    ),
+    url(images1/Hostel-online-1.jpg);
   overflow: hidden;
   background-repeat: no-repeat;
   width: 100%;
@@ -186,49 +183,48 @@ input:focus {
   background-color: #3ed144;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  
 }
 
-.main h1{
-  font-family: 'Poppins', sans-serif;
+.main h1 {
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-weight: 600;
-  
 }
-.main h2{
-  font-family: 'Poppins', sans-serif;
+.main h2 {
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-weight: 600;
 }
 
-.main p{
-  font-family: 'Poppins', sans-serif;
+.main p {
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-weight: 200px;
   margin-top: 50px;
 }
-.explore-btn{
-    margin-top: 100px;
-    margin-left: 10px;
-    padding: 20px 40px; /* Increases the space inside the button */
-      font-size: 18px; /* Makes the text larger */
-      border-radius: 10px; /* Optional: rounded corners */
-      background-color: #3ED144; /* Button color */
-      color: white; /* Text color */
-      border: none; /* Removes border */
-      cursor: pointer; /* Cursor changes to pointer on hover */
-      transition: background-color 0.7s ease-in-out, padding 0.7s ease-in-out, transform 0.7s ease-in-out; /* Smooth hover effect */
+.explore-btn {
+  margin-top: 100px;
+  margin-left: 10px;
+  padding: 20px 40px; /* Increases the space inside the button */
+  font-size: 18px; /* Makes the text larger */
+  border-radius: 10px; /* Optional: rounded corners */
+  background-color: #3ed144; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Removes border */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  transition: background-color 0.7s ease-in-out, padding 0.7s ease-in-out,
+    transform 0.7s ease-in-out; /* Smooth hover effect */
 }
 
 #button2:hover {
   background-color: green;
-    border-color: black;
-    color: black;
-    padding: 1rem 1.5rem;
-    transform: translateX(1rem);
+  border-color: black;
+  color: black;
+  padding: 1rem 1.5rem;
+  transform: translateX(1rem);
 }
 
-.drop-down{
+.drop-down {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -238,21 +234,19 @@ input:focus {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.drop-down h2{
-  font-family: 'Poppins', sans-serif;
+.drop-down h2 {
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-weight: 600;
   padding: 5px;
- 
 }
-.drop-down i{
+.drop-down i {
   width: 30px;
 }
 
-
 /* Footer Styling */
- .footer {
-  background-color: #f8f8f8; 
+.footer {
+  background-color: #f8f8f8;
   color: #000000;
   padding: 20px;
   text-align: center;

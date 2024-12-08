@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LOGIN FORM</title>
+  </head>
+  <style>
+    *body {
+      background: white;
+      text-align: center;
+    }
+    .wrapper {
+      box-shadow: none;
+      color: aliceblue;
+      border-radius: 4px;
+      padding: 30px 40px;
+      text-align: center;
+      justify-content: center;
+      background-position: center;
+    }
+    .wrapper h2 {
+      font-size: 30px;
+      text-align: center;
+      color: black;
+    }
+    .wrapper .input-box {
+      width: 100%;
+      height: 50px;
+      margin: 40px 0;
+    }
+
+    .input-box .input-field {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      border: 2px solid #3ed144;
+      border-radius: 4px;
+      font-size: 17px;
+      color: black;
+      padding: 0 15px;
+      margin: 30px 0;
+      transition: 0.3s;
+      position: relative;
+    }
+    .input-box input::placeholder {
+      color: black;
+      font-weight: 500;
+    }
+
+    .input-submit {
+      text-align: center;
+    }
+
+    .submit-btn {
+      width: 200px;
+      height: 50px;
+      background: #3ed144;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      transition: 0.3s;
+      font-size: 29px;
+      font-weight: 600;
+      margin: 30px 0;
+      position: relative;
+      justify-content: center;
+    }
+    .submit-btn a {
+      text-decoration: none;
+      list-style: none;
+      color: white;
+    }
+    .submit-btn:hover {
+      background: black;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    footer {
+      gap: 12rem;
+      padding: 1rem;
+    }
+
+    .divider span {
+      flex: 5;
+      height: 2px;
+      background-color: black;
+      position: relative;
+    }
+
+    .divider span::before {
+      content: "OR";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 0 0.5rem;
+      color: black;
+      border: none;
+    }
+
+    p img {
+      width: 20px;
+      height: 20px;
+      margin-right: 30px;
+    }
+    footer p {
+      font-size: 25px;
+      font-weight: 400;
+      text-align: center;
+      color: black;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <form action="a">
+        <h2>Students Registration</h2>
+        <div class="input-box">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Enter email address"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Enter Password"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <footer>
+          <div class="divider">
+            <span>OR</span>
+          </div>
+
+          <p>Sign up with Google <img src="logo.png" /></p>
+        </footer>
+        <div class="input-submit">
+          <button class="submit-btn" id="submit">
+            <a href="login.html" class="btn">Sign up</a>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
