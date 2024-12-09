@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="home.js" defer></script>
+
+    <style>
+      /* General reset */
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        height: auto;
+      }
+      .background {
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            /* White color with transparency */ rgba(255, 255, 255, 0.5)
+              /* Adjust opacity as needed */
+          ),
+          url(images1/background\ image.jpeg);
+      }
+      .body {
+        background-color: #3ed144;
+      }
+      .school{
+        background-color: #ece6f0;
+        border-radius: 50px;
+      }
+      .school h2{
+        text-align: center;
+        font-size: 40px;
+      }
+      .school p{
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <!-- The main nav link -->
+    <div class="body1">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list-ul"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              />
+            </svg>
+          </label>
+          <div class="logo">
+            <h1>SAPA</h1>
+          </div>
+          <!-- First div list -->
+
+          <div class="main-div">
+            <ul class="item">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="#Rent History">Rent History</a></li>
+              <li><a href="#Book Accomodation">Book Accomodation</a></li>
+              <li><a href="#Find Roommates">Find Roommates</a></li>
+            </ul>
+          </div>
+          <!-- Second div list -->
+          <div class="main-div">
+            <ul class="account">
+              <li><a href="login.html">PROFILE</a></li>
+              <li><a href="#setting">SETTING</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter keyword here" id="type" />
+          <button onclick="searchSchool()" class="searchClass" id="button1">
+            <i class="fa-solid fa-search"></i>
+            <!-- Search icon inside button -->
+          </button>
+        </div>
+      </header>
+    </div>
+    <div class="background">
+        <div class="school">
+            <h2>UNIVERSITY OF LAGOS</h2>
+            <p> List of Accomodations</p>
+        </div>
+      <div class="image1">
+        <div class="text1">
+          <h3><a href="unilag1.html">Tiled single room self contained</a></h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>Akoka campus, Yaba lagos
+          </p>
+          <p><i class="fa-solid fa-naira-sign"></i>250,000 anually</p>
+          <p id="text2">4th Dec.2024 17:30</p>
+        </div>
+        <img src="images1/hostel7.jpeg" />
+      </div>
+      <div class="image1">
+        <div class="text1">
+          <h3><a href="#">Tiled single room self contained</a></h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>Akoka campus, Yaba lagos
+          </p>
+          <p><i class="fa-solid fa-naira-sign"></i>250,000 anually</p>
+          <p id="text2">4th Dec.2024 17:30</p>
+        </div>
+        <img src="images1/hostel2.jpeg" />
+      </div>
+      <div class="image1">
+        <div class="text1">
+          <h3><a href="#">Tiled single room self contained</a></h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>Akoka campus, Yaba lagos
+          </p>
+          <p><i class="fa-solid fa-naira-sign"></i>250,000 anually</p>
+          <p id="text2">4th Dec.2024 17:30</p>
+        </div>
+        <img src="images1/hostel3.jpeg" />
+      </div>
+      <div class="image1">
+        <div class="text1">
+          <h3><a href="#">Tiled single room self contained</a></h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>Akoka campus, Yaba lagos
+          </p>
+          <p><i class="fa-solid fa-naira-sign"></i>250,000 anually</p>
+          <p id="text2">4th Dec.2024 17:30</p>
+        </div>
+        <img src="images1/hostel4.jpeg" />
+      </div>
+      <div class="image1">
+        <div class="text1">
+          <h3><a href="#">Tiled single room self contained</a></h3>
+          <p>
+            <i class="fa-solid fa-location-dot"></i>Akoka campus, Yaba lagos
+          </p>
+          <p><i class="fa-solid fa-naira-sign"></i>250,000 anually</p>
+          <p id="text2">4th Dec.2024 17:30</p>
+        </div>
+        <img src="images1/hostel5.jpeg" />
+      </div>
+    </div>
+  </body>
+</html>
