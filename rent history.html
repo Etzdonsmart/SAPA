@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent History</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="home.js" defer></script>
+    <script src="searchKeyword.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+      .top {
+        background-color: #f8f8f8;
+      }
+      h1 {
+        text-align: center;
+      }
+      .filter-container {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        background-color: #f8f8f8;
+      }
+      .filter-container input,
+      .filter-container select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .table-container {
+        overflow-x: auto;
+        background-color: #f8f8f8;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background-color: black;
+        color: white;
+      }
+      .chart-container {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        background-color: #f8f8f8;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <!-- The main nav link -->
+    <div class="body1">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list-ul"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              />
+            </svg>
+          </label>
+          <div class="logo">
+            <h1>SAPA</h1>
+          </div>
+          <!-- First div list -->
+
+          <div class="main-div">
+            <ul class="item">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="rent history.html">Rent History</a></li>
+              <li><a href="booking.html">Book Accomodation</a></li>
+              <li><a href="room.html">Find Roommates</a></li>
+            </ul>
+          </div>
+          <!-- Second div list -->
+          <div class="main-div">
+            <ul class="account">
+              <li><a href="login1.html">PROFILE</a></li>
+              <li><a href="set.html">SETTING</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="search-bar">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Enter School here"
+            />
+            <button onclick="searchSchool()" class="searchClass" id="button1">
+              <i class="fa-solid fa-search"></i>
+              <!-- Search icon inside button -->
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="top">
+        <h1>Rent History</h1>
+        <div class="filter-container">
+          <input type="text" id="tenantId" placeholder="Tenant ID" />
+          <input type="text" id="propertyId" placeholder="Property ID" />
+          <input type="date" id="startDate" />
+          <input type="date" id="endDate" />
+          <select id="status">
+            <option value="">All Statuses</option>
+            <option value="paid">Paid</option>
+            <option value="pending">Pending</option>
+            <option value="overdue">Overdue</option>
+          </select>
+          <button onclick="fetchRentHistory()">Filter</button>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Property ID</th>
+                <th>Tenant ID</th>
+                <th>Rent Amount</th>
+                <th>Status</th>
+                <th>Payment Date</th>
+              </tr>
+            </thead>
+            <tbody id="rentHistoryTable">
+              <tr>
+                <td colspan="6" style="text-align: center">
+                  No data available
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="chart-container">
+          <canvas id="rentChart"></canvas>
+        </div>
+      </div>
+      <script>
+        async function fetchRentHistory() {
+          const tenantId = document.getElementById("tenantId").value;
+          const propertyId = document.getElementById("propertyId").value;
+          const startDate = document.getElementById("startDate").value;
+          const endDate = document.getElementById("endDate").value;
+          const status = document.getElementById("status").value;
+
+          const filters = { tenantId, propertyId, startDate, endDate, status };
+
+          try {
+            // Simulated API call
+            const response = await mockApiCall(filters);
+
+            // Update Table
+            const tableBody = document.getElementById("rentHistoryTable");
+            tableBody.innerHTML = response
+              .map(
+                (item) => `
+                    <tr>
+                        <td>${item.transaction_id}</td>
+                        <td>${item.property_id}</td>
+                        <td>${item.tenant_id}</td>
+                        <td>${item.rent_amount}</td>
+                        <td>${item.payment_status}</td>
+                        <td>${item.payment_date}</td>
+                    </tr>
+                `
+              )
+              .join("");
+
+            // Update Chart
+            updateChart(response);
+          } catch (error) {
+            console.error("Error fetching rent history:", error);
+          }
+        }
+
+        function updateChart(data) {
+          const monthlyData = data.reduce((acc, item) => {
+            const month = new Date(item.payment_date).toLocaleString(
+              "default",
+              {
+                month: "short",
+              }
+            );
+            acc[month] = (acc[month] || 0) + parseFloat(item.rent_amount);
+            return acc;
+          }, {});
+
+          const ctx = document.getElementById("rentChart").getContext("2d");
+          new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: Object.keys(monthlyData),
+              datasets: [
+                {
+                  label: "Monthly Rent Collected",
+                  data: Object.values(monthlyData),
+                  backgroundColor: "rgba(75, 192, 192, 0.2)",
+                  borderColor: "rgba(75, 192, 192, 1)",
+                  borderWidth: 2,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: { position: "top" },
+              },
+            },
+          });
+        }
+
+        // Simulated API call for demo purposes
+        async function mockApiCall(filters) {
+          console.log("Filters:", filters); // Logging filters for debugging
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              resolve([
+                {
+                  transaction_id: 1,
+                  property_id: 101,
+                  tenant_id: 1001,
+                  rent_amount: 500,
+                  payment_status: "paid",
+                  payment_date: "2024-01-01",
+                },
+                {
+                  transaction_id: 2,
+                  property_id: 102,
+                  tenant_id: 1002,
+                  rent_amount: 600,
+                  payment_status: "pending",
+                  payment_date: "2024-01-15",
+                },
+                {
+                  transaction_id: 3,
+                  property_id: 103,
+                  tenant_id: 1003,
+                  rent_amount: 700,
+                  payment_status: "overdue",
+                  payment_date: "2024-02-01",
+                },
+              ]);
+            }, 1000);
+          });
+        }
+      </script>
+    </div>
+  </body>
+</html>

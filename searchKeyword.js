@@ -1,16 +1,19 @@
- // JavaScript function to handle search and redirection
- function searchSchool() {
+// JavaScript function to handle search and redirection
+function searchSchool() {
   // Get the value from the search input field
-  var searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
+  var searchQuery = document
+    .getElementById("searchInput")
+    .value.trim()
+    .toLowerCase();
 
   // Check if the search input is not empty
   if (searchQuery !== "") {
     // Define the URL mapping for each school
     var schoolUrls = {
-      "unilag": "unilag.html",
+      unilag: "unilag.html",
       "university of lagos": "unilag.html", // Example of case-insensitivity
-      "harvard": "harvard.html",
-      "mit": "mit.html",
+      lasu: "lasu.html",
+      unn: "unn.html",
       // Add more schools and their corresponding pages here
     };
 

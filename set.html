@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="home.js" defer></script>
+    <script src="searchKeyword.js" defer></script>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ece6f0;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fefefe;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #3de144;
+      }
+
+      /* Profile Section */
+      .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .profile img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #3de144;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+      .profile input[type="file"] {
+        display: none;
+      }
+      .profile button {
+        padding: 10px 15px;
+        background-color: #3de144;
+        color: #fefefe;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .profile button:hover {
+        background-color: #2bb132;
+      }
+
+      /* Sections */
+      .section {
+        margin-bottom: 30px;
+      }
+      .section h2 {
+        color: #3de144;
+        border-bottom: 2px solid #ece6f0;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+      }
+      .section label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .section input[type="text"],
+      .section input[type="email"],
+      .section input[type="password"],
+      .section select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #f1eded;
+        border-radius: 5px;
+        background-color: #fefefe;
+        font-size: 1rem;
+      }
+      .section input:focus {
+        border-color: #3de144;
+        outline: none;
+      }
+
+      /* Toggle Switch */
+      .toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+      }
+      .toggle-switch input {
+        display: none;
+      }
+      .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f1eded;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .slider:before {
+        content: "";
+        position: absolute;
+        height: 19px;
+        width: 19px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.3s;
+      }
+      .toggle-switch input:checked + .slider {
+        background-color: #3de144;
+      }
+      .toggle-switch input:checked + .slider:before {
+        transform: translateX(25px);
+      }
+
+      /* Buttons */
+      .buttons {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .buttons button {
+        padding: 12px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+      .buttons .save {
+        background-color: #3de144;
+        color: #fefefe;
+      }
+      .buttons .save:hover {
+        background-color: #2bb132;
+      }
+      .buttons .cancel {
+        background-color: #f1eded;
+        color: #333;
+      }
+      .buttons .cancel:hover {
+        background-color: #e0d7df;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .profile {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .profile img {
+          margin-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body class="body">
+    <!-- The main nav link -->
+    <div class="body1">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list-ul"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              />
+            </svg>
+          </label>
+          <div class="logo">
+            <h1>SAPA</h1>
+          </div>
+          <!-- First div list -->
+
+          <div class="main-div">
+            <ul class="item">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="#Rent History">Rent History</a></li>
+              <li><a href="booking.html">Book Accomodation</a></li>
+              <li><a href="room.html">Find Roommates</a></li>
+            </ul>
+          </div>
+          <!-- Second div list -->
+          <div class="main-div">
+            <ul class="account">
+              <li><a href="login1.html">PROFILE</a></li>
+              <li><a href="set.html">SETTING</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="search-bar">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Enter School here"
+            />
+            <button onclick="searchSchool()" class="searchClass" id="button1">
+              <i class="fa-solid fa-search"></i>
+              <!-- Search icon inside button -->
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <h1>Account Settings</h1>
+
+        <!-- Profile Section -->
+        <div class="profile">
+          <img
+            id="profile-pic"
+            src="https://via.placeholder.com/100"
+            alt="Profile Picture"
+          />
+          <div>
+            <label for="upload-pic">Upload New Picture</label>
+            <input
+              type="file"
+              id="upload-pic"
+              accept="image/*"
+              onchange="previewImage(event)"
+            />
+            <button onclick="document.getElementById('upload-pic').click()">
+              Choose File
+            </button>
+          </div>
+        </div>
+
+        <!-- Personal Info Section -->
+        <div class="section">
+          <h2>Personal Information</h2>
+          <label for="full-name">Full Name</label>
+          <input
+            type="text"
+            id="full-name"
+            placeholder="Enter your full name"
+          />
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+          />
+        </div>
+
+        <!-- Security Section -->
+        <div class="section">
+          <h2>Security</h2>
+          <label for="password">New Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter new password"
+          />
+        </div>
+
+        <!-- Notifications Section -->
+        <div class="section">
+          <h2>Notifications</h2>
+          <div class="toggle">
+            <span>Email Notifications</span>
+            <label class="toggle-switch">
+              <input type="checkbox" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="toggle">
+            <span>Push Notifications</span>
+            <label class="toggle-switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+          <button class="save" onclick="saveChanges()">Save Changes</button>
+          <button class="cancel" onclick="cancelChanges()">
+            <a href="home.html">Cancel</a>
+          </button>
+        </div>
+      </div>
+
+      <script>
+        function previewImage(event) {
+          const reader = new FileReader();
+          reader.onload = function () {
+            const profilePic = document.getElementById("profile-pic");
+            profilePic.src = reader.result;
+          };
+          reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function saveChanges() {
+          alert("Your changes have been saved successfully!");
+        }
+
+        function cancelChanges() {
+          if (confirm("Are you sure you want to cancel your changes?")) {
+            document.getElementById("full-name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+            alert("Changes have been canceled.");
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

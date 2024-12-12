@@ -26,7 +26,7 @@ nav {
   position: sticky;
   top: 0;
 }
-header{
+header {
   background-color: #3ed144;
 }
 
@@ -216,13 +216,13 @@ input:focus {
   margin-left: 10px;
   padding: 20px 40px; /* Increases the space inside the button */
   font-size: 18px; /* Makes the text larger */
-  border-radius: 10px; /* Optional: rounded corners */
+  border-radius: 10px; /* rounded corners */
   background-color: #3ed144; /* Button color */
   color: white; /* Text color */
   border: none; /* Removes border */
   cursor: pointer; /* Cursor changes to pointer on hover */
   transition: background-color 0.7s ease-in-out, padding 0.7s ease-in-out,
-    transform 0.7s ease-in-out; /* Smooth hover effect */
+    transform 0.7s ease-in-out; /*  hover effect */
 }
 
 #button2:hover {
@@ -260,7 +260,6 @@ input:focus {
   padding: 20px;
   text-align: center;
   font-family: Arial, sans-serif;
-
 }
 
 .footer-links {
@@ -295,14 +294,14 @@ input:focus {
   vertical-align: middle;
 } */
 
-.image1{
+.image1 {
   display: flex;
   flex-direction: row;
   width: 100%;
   margin: 10px;
 }
 
-.text1{
+.text1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,7 +311,7 @@ input:focus {
   height: auto;
 }
 
-.text1 a{
+.text1 a {
   font-family: "Poppins", sans-serif;
   color: white;
   text-decoration: none;
@@ -320,29 +319,25 @@ input:focus {
   text-align: center;
   width: 100%;
   margin-top: 10px;
-
-
-  
 }
-.text1 p{
+.text1 p {
   font-family: "Poppins", sans-serif;
   color: white;
   text-align: center;
   padding: 10px;
   width: 100%;
-  
 }
 
-#text2{
+#text2 {
   display: flex;
   justify-content: left;
   font-size: 10px;
 }
 
-.text1 a:hover{
+.text1 a:hover {
   color: #3ed144;
   text-decoration: dotted;
 }
-.image1 img{
+.image1 img {
   width: 200px;
 }
