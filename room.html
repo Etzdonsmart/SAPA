@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Roommate</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="home.js" defer></script>
+    <script src="searchKeyword.js" defer></script>
+    <style>
+      /* Roommates Section Styling */
+      #roommates {
+        background-color: #fefefe; /* Light background for a clean look */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        margin: 20px auto;
+      }
+
+      /* Heading Style */
+      #roommates h2 {
+        color: #3de144;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Form styling */
+      #roommate-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      /* Label Styling */
+      #roommate-form label {
+        font-weight: bold;
+        color: #333; /* Dark gray for text */
+        font-size: 16px;
+      }
+
+      /* Input Field Styling */
+      #roommate-form input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ddd; /* Light border */
+        border-radius: 4px;
+        font-size: 16px;
+        color: #333;
+        width: 100%;
+      }
+
+      #roommate-form input[type="text"]:focus {
+        border-color: #3de144;
+        outline: none;
+      }
+
+      /* Button Styling */
+      #roommate-form button {
+        background-color: #3de144;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #roommate-form button:hover {
+        background-color: #3de144;
+      }
+
+      /* Results Section Styling */
+      #roommate-results {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e0f7fa;
+        border-radius: 8px;
+        display: none; /* Hide results initially */
+      }
+
+      #roommate-results p {
+        color: #333;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 600px) {
+        #roommates {
+          padding: 15px;
+          margin: 10px;
+        }
+
+        #roommate-form {
+          gap: 10px;
+        }
+
+        #roommate-form button {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body class="body">
+    <!-- The main nav link -->
+    <div class="body1">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list-ul"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              />
+            </svg>
+          </label>
+          <div class="logo">
+            <h1>SAPA</h1>
+          </div>
+          <!-- First div list -->
+
+          <div class="main-div">
+            <ul class="item">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="rent history.html">Rent History</a></li>
+              <li><a href="booking.html">Book Accomodation</a></li>
+              <li><a href="room.html">Find Roommates</a></li>
+            </ul>
+          </div>
+          <!-- Second div list -->
+          <div class="main-div">
+            <ul class="account">
+              <li><a href="login1.html">PROFILE</a></li>
+              <li><a href="set.html">SETTING</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="search-bar">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Enter School here"
+            />
+            <button onclick="searchSchool()" class="searchClass" id="button1">
+              <i class="fa-solid fa-search"></i>
+              <!-- Search icon inside button -->
+            </button>
+          </div>
+        </div>
+      </header>
+      <section id="roommates">
+        <h2>Find a Compatible Roommate</h2>
+        <form id="roommate-form">
+          <label for="gender">Gender Preference:</label>
+          <input
+            type="text"
+            id="gender"
+            name="gender"
+            placeholder="e.g., Male, Female"
+          />
+
+          <label for="interests">Shared Interests:</label>
+          <input
+            type="text"
+            id="interests"
+            name="interests"
+            placeholder="e.g., Gaming, Cooking"
+          />
+
+          <button type="button" onclick="findRoommate()">Find Roommate</button>
+        </form>
+        <div id="roommate-results"></div>
+      </section>
+      <script>
+        // Load accommodations on page load
+        window.onload = loadAccommodations;
+        // Roommate Finder Logic
+        function findRoommate() {
+          const gender = document.getElementById("gender").value;
+          const interests = document.getElementById("interests").value;
+          const results = document.getElementById("roommate-results");
+
+          results.innerHTML = `
+      <p>Roommate Found!</p>
+      <p>Gender Preference: ${gender}</p>
+      <p>Shared Interests: ${interests}</p>
+    `;
+        }
+
+        // Smooth Scroll to Sections
+        function scrollToSection(sectionId) {
+          document
+            .getElementById(sectionId)
+            .scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Load Properties on Page Load
+        window.onload = loadProperties;
+      </script>
+    </div>
+  </body>
+</html>

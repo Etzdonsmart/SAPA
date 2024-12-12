@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Explore</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
@@ -22,24 +22,27 @@
     <script src="home.js" defer></script>
 
     <style>
-           /* General reset */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      height: auto;
-      overflow: scroll;
-    }
+      /* General reset */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        height: auto;
+        overflow: scroll;
+      }
 
-    /* Content container */
-    .container {
-      position: relative;
-      z-index: 1; /* Ensures content stays on top of the slideshow */
-      padding-left: 20px;
-      background-image: linear-gradient(
-        rgba(255, 255, 255, 0.5), /* White color with transparency */
-        rgba(255, 255, 255, 0.5)  /* Adjust opacity as needed */
-        ),url(images1/OIP.jpeg);
+      /* Content container */
+      .container {
+        position: relative;
+        z-index: 1; /* Ensures content stays on top of the slideshow */
+        padding-left: 20px;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            /* White color with transparency */ rgba(255, 255, 255, 0.5)
+              /* Adjust opacity as needed */
+          ),
+          url(images1/OIP.jpeg);
         overflow: hidden;
         background-repeat: no-repeat;
         width: 100%;
@@ -48,148 +51,159 @@
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         text-align: center;
-        
-    }
+      }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #000000;
-    }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000000;
+      }
 
-    .university-list {
-      list-style: none;
-      
-      
-    }
+      .university-list {
+        list-style: none;
+      }
 
-    .university-list li {
-      margin: 10px;
-      font-size: 18px;
-      width: 100%;
-      height: auto;
-      transition: all ease-in-out 500ms;
+      .university-list li {
+        margin: 10px;
+        font-size: 18px;
+        width: 100%;
+        height: auto;
+        transition: all ease-in-out 500ms;
+      }
 
+      .university-list a {
+        text-decoration: none;
+        color: #000000;
+        width: 100%;
+        background-color: #f0f0f0;
+        display: block;
+      }
 
-      
-    }
-
-    .university-list a {
-      text-decoration: none;
-      color: #000000;
-      width: 100%;
-      background-color: #f0f0f0;
-      display: block;
-     
-    }
-
-   .university-list a:hover {
+      .university-list a:hover {
         background-color: #3ed144;
-    border-color: black;
-    color: black;
-    
-    }
-  
-      </style>
+        border-color: black;
+        color: black;
+      }
+    </style>
   </head>
   <body class="body">
     <!-- The main nav link -->
-     <div class="body1">
-    <header>
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="menu">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-list-ul"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            />
-          </svg>
-        </label>
-        <div class="logo">
-          <h1>SAPA</h1>
-        </div>
-        <!-- First div list -->
+    <div class="body1">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list-ul"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              />
+            </svg>
+          </label>
+          <div class="logo">
+            <h1>SAPA</h1>
+          </div>
+          <!-- First div list -->
 
-        <div class="main-div">
-          <ul class="item">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="#Rent History">Rent History</a></li>
-            <li><a href="#Book Accomodation">Book Accomodation</a></li>
-            <li><a href="#Find Roommates">Find Roommates</a></li>
-          </ul>
+          <div class="main-div">
+            <ul class="item">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="#Rent History">Rent History</a></li>
+              <li><a href="booking.html">Book Accomodation</a></li>
+              <li><a href="room.html">Find Roommates</a></li>
+            </ul>
+          </div>
+          <!-- Second div list -->
+          <div class="main-div">
+            <ul class="account">
+              <li><a href="login1.html">PROFILE</a></li>
+              <li><a href="set.html">SETTING</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter keyword here" id="type" />
+          <button onclick="searchSchool()" class="searchClass" id="button1">
+            <i class="fa-solid fa-search"></i>
+            <!-- Search icon inside button -->
+          </button>
         </div>
-        <!-- Second div list -->
-        <div class="main-div">
-          <ul class="account">
-            <li><a href="login.html">PROFILE</a></li>
-            <li><a href="#setting">SETTING</a></li>
-          </ul>
-        </div>
-        
-      </nav>
-      <div class="search-bar">
-        <input type="text" placeholder="Enter keyword here"  id="type"/>
-        <button onclick="searchSchool()" class="searchClass" id="button1">
-          <i class="fa-solid fa-search"></i>
-          <!-- Search icon inside button -->
-        </button>
+      </header>
+
+      <!-- Content -->
+      <div class="container">
+        <h1>Federal and State Universities</h1>
+        <ul class="university-list">
+          <li><a href="#ABU-Zaria">Ahmadu Bello University, Zaria</a></li>
+          <li><a href="#BSU-Makurdi">Benue State University, Makurdi</a></li>
+          <li><a href="unilag.html">University of Lagos</a></li>
+          <li><a href="#UNN-Nsukka">University of Nigeria, Nsukka</a></li>
+          <li><a href="#UI-Ibadan">University of Ibadan</a></li>
+          <li>
+            <a href="#OAU-Ile-Ife">Obafemi Awolowo University, Ile-Ife</a>
+          </li>
+          <li>
+            <a href="#FUTA-Akure">Federal University of Technology, Akure</a>
+          </li>
+          <li>
+            <a href="#LASU" class="school-link" data-school="lasu"
+              >Lagos State University</a
+            >
+          </li>
+          <li><a href="#UNIPORT">University of Port Harcourt</a></li>
+          <li><a href="#BUK-Kano">Bayero University, Kano</a></li>
+          <li><a href="#UNIUYO">University of Uyo</a></li>
+          <li>
+            <a href="#FUPRE"
+              >Federal University of Petroleum Resources, Effurun</a
+            >
+          </li>
+          <li>
+            <a href="#FUNAB">Federal University of Agriculture, Abeokuta</a>
+          </li>
+          <li><a href="#UNIBEN">University of Benin</a></li>
+          <li>
+            <a href="#FUNAAB">Federal University of Agriculture, Abeokuta</a>
+          </li>
+          <li><a href="#UNIOSUN">Osun State University</a></li>
+          <li><a href="#UNEC">University of Calabar</a></li>
+          <li><a href="#FUGUS">Federal University Gusau</a></li>
+          <li><a href="#UNIABUJA">University of Abuja</a></li>
+          <li><a href="#UNILORIN">University of Ilorin</a></li>
+          <li><a href="#UNICAL">University of Calabar</a></li>
+          <li><a href="#UNIMAID">University of Maiduguri</a></li>
+          <li><a href="#UNIPORT">University of Port Harcourt</a></li>
+          <li><a href="#OAU">Obafemi Awolowo University, Ile-Ife</a></li>
+          <li><a href="#LAGOS-STATE-UNIVERSITY">Lagos State University</a></li>
+          <li><a href="#KSU">Kogi State University</a></li>
+          <li><a href="#UMYU">Umaru Musa Yar’adua University</a></li>
+          <li>
+            <a href="#FUPRE"
+              >Federal University of Petroleum Resources, Effurun</a
+            >
+          </li>
+          <li><a href="#TASUED">Tai Solarin University of Education</a></li>
+          <li><a href="#UNIOSUN">Osun State University</a></li>
+          <li><a href="#UNIUYO">University of Uyo</a></li>
+          <li><a href="#BUK">Bayero University, Kano</a></li>
+          <li><a href="#WUKARI">Federal University, Wukari</a></li>
+          <li>
+            <a href="#FUTMINNA">Federal University of Technology, Minna</a>
+          </li>
+          <li><a href="#AAUA">Adekunle Ajasin University, Akungba-Akoko</a></li>
+          <li><a href="#LASU">Lagos State University</a></li>
+          <li><a href="#UNIMED">University of Medicine, Edo</a></li>
+          <li><a href="#DELSU">Delta State University</a></li>
+          <li><a href="#BASU">Bauchi State University</a></li>
+        </ul>
       </div>
-    </header>
-
-
-  <!-- Content -->
-  <div class="container">
-    <h1>Federal and State Universities</h1>
-    <ul class="university-list">
-      <li><a href="#ABU-Zaria">Ahmadu Bello University, Zaria</a></li>
-      <li><a href="#BSU-Makurdi">Benue State University, Makurdi</a></li>
-      <li><a href="unilag.html">University of Lagos</a></li>
-      <li><a href="#UNN-Nsukka">University of Nigeria, Nsukka</a></li>
-      <li><a href="#UI-Ibadan">University of Ibadan</a></li>
-      <li><a href="#OAU-Ile-Ife">Obafemi Awolowo University, Ile-Ife</a></li>
-      <li><a href="#FUTA-Akure">Federal University of Technology, Akure</a></li>
-      <li><a href="#LASU"  class="school-link" data-school="lasu">Lagos State University</a></li>
-      <li><a href="#UNIPORT">University of Port Harcourt</a></li>
-      <li><a href="#BUK-Kano">Bayero University, Kano</a></li>
-      <li><a href="#UNIUYO">University of Uyo</a></li>
-      <li><a href="#FUPRE">Federal University of Petroleum Resources, Effurun</a></li>
-      <li><a href="#FUNAB">Federal University of Agriculture, Abeokuta</a></li>
-      <li><a href="#UNIBEN">University of Benin</a></li>
-      <li><a href="#FUNAAB">Federal University of Agriculture, Abeokuta</a></li>
-      <li><a href="#UNIOSUN">Osun State University</a></li>
-      <li><a href="#UNEC">University of Calabar</a></li>
-      <li><a href="#FUGUS">Federal University Gusau</a></li>
-      <li><a href="#UNIABUJA">University of Abuja</a></li>
-      <li><a href="#UNILORIN">University of Ilorin</a></li>
-      <li><a href="#UNICAL">University of Calabar</a></li>
-      <li><a href="#UNIMAID">University of Maiduguri</a></li>
-      <li><a href="#UNIPORT">University of Port Harcourt</a></li>
-      <li><a href="#OAU">Obafemi Awolowo University, Ile-Ife</a></li>
-      <li><a href="#LAGOS-STATE-UNIVERSITY">Lagos State University</a></li>
-      <li><a href="#KSU">Kogi State University</a></li>
-      <li><a href="#UMYU">Umaru Musa Yar’adua University</a></li>
-      <li><a href="#FUPRE">Federal University of Petroleum Resources, Effurun</a></li>
-      <li><a href="#TASUED">Tai Solarin University of Education</a></li>
-      <li><a href="#UNIOSUN">Osun State University</a></li>
-      <li><a href="#UNIUYO">University of Uyo</a></li>
-      <li><a href="#BUK">Bayero University, Kano</a></li>
-      <li><a href="#WUKARI">Federal University, Wukari</a></li>
-      <li><a href="#FUTMINNA">Federal University of Technology, Minna</a></li>
-      <li><a href="#AAUA">Adekunle Ajasin University, Akungba-Akoko</a></li>
-      <li><a href="#LASU">Lagos State University</a></li>
-      <li><a href="#UNIMED">University of Medicine, Edo</a></li>
-      <li><a href="#DELSU">Delta State University</a></li>
-      <li><a href="#BASU">Bauchi State University</a></li>
-    </ul>
-  </div>
-
-</body>
+    </div>
+  </body>
 </html>

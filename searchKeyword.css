@@ -1,48 +1,41 @@
 /* Style for the search bar container */
- .search-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border:none; /* Adds a border around the search bar */
-    /* border-radius: 5px; */
-    width: 257px;
-    height: fit-content;
-    margin: 50px;
-    background-color: #3de144;
-    padding: 0 10px; /*Padding inside the search bar */
- }
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 257px;
+  height: fit-content;
+  margin: 50px;
+  background-color: #3de144;
+  padding: 0 10px; /*Padding inside the search bar */
+}
 
-   
-  /* Style for the input field */
+/* Style for the input field */
 .search-container input {
-    flex-grow: 1; /* Allows input field to take all available space */
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px 0 0 5px; /* Rounded corners for left side */
+  flex-grow: 1; /* Allows input field to take all available space */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px; /* Rounded corners for left side */
 }
 
-}
-  /* Style for the search button */
+/* Style for the search button */
 .search-container button {
-    background-color: #3e1449;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 0 5px 5px 0; /*Rounded corners for right side */
-    cursor: pointer;
-  } 
-  
-.search-container button i {
-    font-size: 18px;
-  } 
-  
-  /* Optional: Button hover effect */
-.search-container button:hover {
-    background-color: #2a0053;
-  } 
- 
-.searchClass{
+  background-color: #3e1449;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 0 5px 5px 0; /*Rounded corners for right side */
+  cursor: pointer;
+}
 
+.search-container button i {
+  font-size: 18px;
+}
+
+/* Optional: Button hover effect */
+.search-container button:hover {
+  background-color: #2a0053;
 }
